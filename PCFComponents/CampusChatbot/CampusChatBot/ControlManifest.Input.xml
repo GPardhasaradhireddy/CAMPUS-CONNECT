@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="CampusConnect" constructor="CampusChatBot" version="1.1.0" display-name-key="Campus Connect AI Chatbot" description-key="Floating TypeScript-only PCF chatbot for Campus Connect" control-type="standard">
+    <property name="studentName" display-name-key="Student Name" description-key="Logged-in student name" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="rollNumber" display-name-key="Roll Number" description-key="Student roll number" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="department" display-name-key="Department" description-key="Student department" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="year" display-name-key="Year" description-key="Student academic year" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="cgpa" display-name-key="CGPA" description-key="Student CGPA" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="attendance" display-name-key="Attendance" description-key="Student attendance" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="backlogs" display-name-key="Backlogs" description-key="Student backlog count or details" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="skills" display-name-key="Skills" description-key="Student skill list" of-type="Multiple" usage="bound" required="false" />
+    <property name="complaintStatus" display-name-key="Complaint Status" description-key="Latest complaint status" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="themeColor" display-name-key="Theme Color" description-key="Primary chatbot theme color" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="botName" display-name-key="Bot Name" description-key="Chatbot display name" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="enableVoice" display-name-key="Enable Voice" description-key="Enable voice input and speech output" of-type="TwoOptions" usage="input" required="false" />
+    <property name="enableFileUpload" display-name-key="Enable File Upload" description-key="Enable file upload UI" of-type="TwoOptions" usage="input" required="false" />
+    <property name="enableAvatarMode" display-name-key="Enable Avatar Mode" description-key="Enable avatar response placeholder" of-type="TwoOptions" usage="input" required="false" />
+    <property name="collegeName" display-name-key="College Name" description-key="College name for chatbot context" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="userRole" display-name-key="User Role" description-key="Student, faculty, admin, mentor, etc." of-type="SingleLine.Text" usage="bound" required="false" />
+
+    <property name="lastUserMessage" display-name-key="Last User Message" description-key="Latest user message" of-type="SingleLine.Text" usage="output" required="false" />
+    <property name="lastBotResponse" display-name-key="Last Bot Response" description-key="Latest bot response" of-type="Multiple" usage="output" required="false" />
+    <property name="uploadedFileName" display-name-key="Uploaded File Name" description-key="Latest uploaded file name" of-type="SingleLine.Text" usage="output" required="false" />
+    <property name="selectedQuickAction" display-name-key="Selected Quick Action" description-key="Latest selected quick action" of-type="SingleLine.Text" usage="output" required="false" />
+    <property name="detectedComplaintCategory" display-name-key="Detected Complaint Category" description-key="AI detected complaint category" of-type="SingleLine.Text" usage="output" required="false" />
+    <property name="predictedPriority" display-name-key="Predicted Priority" description-key="AI predicted complaint priority" of-type="SingleLine.Text" usage="output" required="false" />
+    <property name="chatbotEvent" display-name-key="Chatbot Event" description-key="Latest chatbot event" of-type="SingleLine.Text" usage="output" required="false" />
+
+    <resources>
+      <code path="index.ts" order="1" />
+    </resources>
+  </control>
+</manifest>
